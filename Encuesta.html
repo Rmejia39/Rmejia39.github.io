@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta The Glam App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f2f1; /* Fondo celeste cian */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column; /* Alinear elementos en columna */
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #009688; /* Color del título */
+    }
+
+    .preguntas {
+      background-color: #fff; /* Fondo blanco para las preguntas */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-height: 70vh; /* Altura máxima con desplazamiento */
+      overflow-y: auto; /* Habilitar el desplazamiento vertical */
+    }
+
+    .pregunta {
+      margin-bottom: 20px;
+    }
+
+    .respuesta {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #009688; /* Color del botón */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00796b; /* Color del botón al pasar el mouse */
+    }
+
+    .mensaje-final {
+      text-align: center;
+      color: #009688; /* Color del mensaje final */
+    }
+
+    .oculto {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo">
+    <h1>Encuesta The Glam App</h1>
+  </div>
+
+
+    <div class="pregunta">
+
+      <div class="preguntas">
+        <div class="pregunta">
+          <p>1. ¿Cómo calificarías la facilidad de navegación en la página?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta1" value="facilidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta1" value="facilidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta1" value="facilidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta1" value="facilidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>2. ¿Estás satisfecho con la variedad de salones de belleza disponibles en la plataforma?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta2" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta2" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta2" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta2" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>3. ¿Qué opinas sobre la función de programar citas dentro de la página?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta3" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta3" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta3" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta3" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>4. ¿Te resultó útil la sección de compra de productos dentro de la plataforma?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta4" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta4" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta4" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta4" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>5. ¿Qué tan precisas consideras las recomendaciones de colores de cabello según tu tono de piel?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta5" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta5" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta5" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta5" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>6. ¿La sección de identificación de tipo de rostro te ayudó a elegir un corte de cabello adecuado?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta6" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta6" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta6" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta6" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>7. ¿Cómo evaluarías la calidad del servicio proporcionado por los salones de belleza listados en la aplicación?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta7" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta7" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta7" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta7" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>8. ¿La información proporcionada por los salones (ubicación, servicios, horarios, etc.) fue clara y precisa?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta8" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta8" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta8" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta8" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>9. ¿Recomendarías The Glam App a tus amigos/familiares?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta9" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta9" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta9" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta9" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pregunta">
+          <p>10. En general, ¿cómo te sientes acerca de tu experiencia con The Glam App?</p>
+          <div class="respuestas">
+            <div class="respuesta">
+              <input type="radio" name="respuesta10" value="velocidad_feliz">
+              <label>Feliz 😊</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta10" value="velocidad_contento">
+              <label>Contento 🙂</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta10" value="velocidad_enojado">
+              <label>Enojado 😠</label>
+            </div>
+            <div class="respuesta">
+              <input type="radio" name="respuesta10" value="velocidad_muyenojado">
+              <label>Muy enojado 😡</label>
+            </div>
+          </div>
+        </div>
+
+
+    <button id="enviar">Enviar</button>
+  </div>
+
+  <div class="mensaje-final oculto">
+    <!-- Aquí va el mensaje final -->
+  </div>
+
+  <script>
+    const botonEnviar = document.getElementById('enviar');
+    const mensajeFinal = document.querySelector('.mensaje-final');
+    const preguntas = document.querySelectorAll('.pregunta');
+
+    botonEnviar.addEventListener('click', function() {
+      let todasRespondidas = true;
+
+      preguntas.forEach(pregunta => {
+        const respuestas = pregunta.querySelectorAll('input[type="radio"]');
+        let algunaSeleccionada = false;
+
+        respuestas.forEach(respuesta => {
+          if (respuesta.checked) {
+            algunaSeleccionada = true;
+          }
+        });
+
+        if (!algunaSeleccionada) {
+          todasRespondidas = false;
+        }
+      });
+
+      // Verificar si todas las preguntas tienen al menos una respuesta seleccionada
+      if (todasRespondidas) {
+        // Mostrar mensaje final si todas las respuestas están seleccionadas
+        mensajeFinal.classList.remove('oculto');
+        // Mostrar mensaje emergente
+        alert('Gracias por realizar la encuesta. Esto nos ayuda a mejorar.');
+      } else {
+        alert('Por favor, responde todas las preguntas.');
+      }
+    });
+  </script>
+
+</body>
+</html>

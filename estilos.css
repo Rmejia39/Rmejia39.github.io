@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+	background-image: url(images/cabello.jpg);
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+#BtnPagina {
+	margin-left: 30px;
+	margin-top: 550px;
+}
+
+#Nombre {
+	margin-top: 38px;
+}
+
+/*BARRA DE BUSQUEDA*/
+#input-search {
+	margin-left: 130px;
+	margin-top: 35px;
+	width: 450px;
+	height: 40px;
+	font-size: 20px;
+	text-indent: 10px;
+	background-color: pink;
+	/*Color del fondo de busqueda*/
+}
+
+.content-search {
+	margin-left: 600px;
+	margin-top: 18px;
+	width: 460px;
+	height: auto;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	background: grey;
+	/*Fondo Gris*/
+	display: none;
+}
+
+.content-table {
+	width: 395px;
+	height: auto;
+	background: grey;
+	/*Las sugerencias de busqueda*/
+	margin-left: 10px;
+	overflow-y: visible;
+	overflow-x: hidden;
+}
+
+tbody tr td a {
+	display: block;
+	padding: 10px;
+	color: white;
+	/*Color de las letras de la sugerencia*/
+	text-decoration: none;
+	width: 380px;
+}
+
+tbody tr td a:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+#table_length,
+#table_filter,
+#table_info,
+#table_paginate {
+	display: none;
+}
+
+/*FIN DE BARRA DE BUSQUEDA*/
+
+
+/*Estilos para el encabezado*/
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	background-color: black;
+}
+
+.container .btn-menu,
+.logo {
+	color: #fff;
+	float: left;
+	line-height: 100px;
+}
+
+.container .btn-menu label {
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.logo h1 {
+	font-weight: 400;
+	font-size: 22px;
+	margin-left: 10px;
+}
+
+.container .menu {
+	float: right;
+	line-height: 100px;
+}
+
+.container .menu a {
+	display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.container .menu a:hover {
+	border-bottom: 2px solid #c7c7c7;
+	padding-bottom: 5px;
+}
+
+/*Fin de Estilos para el encabezado*/
+
+
+/*Menù lateral*/
+#btn-menu {
+	display: none;
+}
+
+.container-menu {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.cont-menu {
+	width: 100%;
+	max-width: 250px;
+	background: pink;
+	/*Color de fondo*/
+	height: 100vh;
+	position: relative;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+	transform: translateX(0%);
+}
+
+.cont-menu nav {
+	transform: translateY(15%);
+}
+
+.cont-menu nav a {
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	color: black;
+	/*Letras Negras*/
+	border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+	border-left: 5px solid #c7c7c7;
+	background: #1f1f1f;
+}
+
+.cont-menu label {
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+/*Fin de Menù lateral*/
+
+scroll-container {
+    display: block;
+    width: 1000px;
+    height: 700px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+/* Estilo para el contenedor principal */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por fila */
+    gap: 1px; /* Espacio entre las filas */
+}
+
+/* Estilo para cada tarjeta */
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para el contenido de la tarjeta */
+.card-content {
+    display: flex;
+}
+
+/* Estilo para la imagen */
+.card-content img {
+    max-width: 35%; /* Ajusta el ancho de la imagen según tus preferencias */
+    height: auto;
+	aspect-ratio: 1/1;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para el párrafo de descripción */
+.card-content p {
+	margin-top: 20px;
+	margin-left: 50px;
+	align-self: stretch;
+	margin-right: 250px;
+}
+
+.text-center {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+}
+
+.Letras {
+color: white;
+}
